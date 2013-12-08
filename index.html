@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>PKM</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+		<script>
+		
+		var random = Math.random();
+		var fja = function(random){
+		
+		var izbor = prompt('Unesite jedno od mogućih stanja','papir, kamen, makaze');
+		
+		if (random < 0.33) {
+				random = 'papir';
+			}
+			
+			else if (random >= 0.33 && random < 0.66) {
+				random = 'kamen';
+			}
+			
+			else if (random >= 0.66) {
+				random = 'makaze';
+			}
+		
+		switch(izbor) {
+			case 'papir':
+			if (izbor == random)
+				alert('Igraj ponovo');
+			else if (izbor == 'papir' && random == 'kamen')
+				alert('Ti si Genije!');
+			else if (izbor == 'papir' && random == 'makaze')
+				alert('Nemaš pojma, njaaa :P');
+				
+			case 'kamen':
+			if (izbor == random)
+				alert('Igraj ponovo');
+			else if (izbor == 'kamen' && random == 'papir')
+				alert('Moraš jooooš da učiš');
+			else if (izbor == 'kamen' && random == 'makaze')
+				alert('Teška srca, čestitam ti');
+				
+			case 'makaze':
+			if (izbor == random)
+				alert('Igraj ponovo');
+			else if (izbor == 'makaze' && random == 'papir')
+				alert('Dominacija!!! Ipak više moraš vježbati.');
+			else if (izbor == 'makaze' && random == 'kamen')
+				alert('Ijao, ne opet! Bravo :/');
+			
+			default:
+				alert('Unesi jedan od ponuđenih odgovora (papir, kamen ili makaze)');
+		
+		}
+
+		};
+	</script>
+	</head>
+	
+	<body>
+	
+		<div id = "omot">
+
+			<h1>Papir, kamen, makaze</h1>
+
+			<div id = "paragraf">
+
+				
+				
+				<p>
+				Papir, kamen, makaze je igra popularna među osnovcima, mada je nekad iz zabave, dosade ili čega već, i stariji zaigraju :)
+				Igra je osmišljena tako da je igra dvoje ljudi. Oba takmičara u trenutku biraju jedan od znakova, tj. papir, kamen ili makaze.
+				Papir može pobijediti kamen, zato što ga može obmotati. Kamen može pobijediti makaze, jer ih može slomiti, a makaze mogu pobijediti
+				papir, jer ga mogu isjeći.
+				Na fotografiji su prikazani simboli za igru u realnosti, a da biste saznali kako to funkcioniše kada igrate protiv računara,
+				pritisnite 'Igraj!'.
+				</p>
+
+			</div>
+
+			<div id = "slika">
+
+				<img src = "image/pkm.jpg">
+
+			</div>
+
+			<div id = "dugme">
+			
+			<input class = "btn" type="button" value="Igraj!" onclick="fja(random);" >
+
+			</div>
+		
+		</div>
+	</body>
+	
+	
+</html>
